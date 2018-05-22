@@ -2,6 +2,7 @@
 /public/build
 /public/storage
 /storage/*.key
+/storage/docker/*
 /vendor
 /.idea
 /.vscode

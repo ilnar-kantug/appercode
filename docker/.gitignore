@@ -1,0 +1,7 @@
+*
+!.gitignore
+!nginx.docker
+!php-cli.docker
+!php-fpm.docker
+!nginx
+!nginx/*
