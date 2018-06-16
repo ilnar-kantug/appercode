@@ -23,8 +23,8 @@ watch-assets:
 	docker-compose exec node yarn run watch
 
 perm:
-	sudo chmod -R 777 vendor -R
-	sudo chmod -R 777 storage -R
-	sudo chmod -R 777 bootstrap/cache -R
-	if [ -d "node_modules" ]; then sudo chmod -R 777 -R; fi
-	if [ -d "public/build" ]; then sudo chmod -R 777 -R; fi
+	sudo chmod -R 777 vendor
+	sudo chmod -R 777 storage
+	sudo chmod -R 777 bootstrap/cache
+	if [ -d "node_modules" ]; then sudo chmod -R 777 node_modules; fi
+	if [ -d "public/build" ]; then sudo chmod -R 777 public/build; fi
