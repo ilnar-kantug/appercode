@@ -33,6 +33,6 @@ class AppercodeController extends Controller
         }catch (\Exception $exception){
             return redirect('/')->with('error', $exception->getMessage());
         }
-        return redirect('/');
+        return response()->download($xml_path);
     }
 }
