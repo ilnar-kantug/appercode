@@ -62,6 +62,17 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            .app_errors{
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                color: red;
+                font-weight: 700;
+                width: 400px;
+                border: 1px solid #e6e6e6;
+                padding: 20px;
+                border-radius: 5px;
+            }
         </style>
     </head>
     <body>
@@ -83,13 +94,14 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="{{route('getUsers')}}">GetUsers</a>
                 </div>
             </div>
+            @if (session('error'))
+                <div class="app_errors">
+                    {{ session('error') }}
+                </div>
+            @endif
         </div>
     </body>
 </html>
